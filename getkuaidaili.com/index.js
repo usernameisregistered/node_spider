@@ -5,8 +5,9 @@ const fs = require("fs");
 const net = require("net");
 const getOneAgent = require("../common/randomGetAgent").getOneAgent;
 const checkProxy = require("../common/checkProxy").checkProxy;
-let page = 1;
-
+let page = 6;
+let usefulList=[];
+let  current = 0;
 function getHtml() {
     let options = {
         host:'www.kuaidaili.com',
@@ -19,7 +20,6 @@ function getHtml() {
     }
     console.log(`请求：https://${options.host}${options.path}`)
     https.get(options, function (res) {
-        console.log(res)
         const { statusCode } = res;
         if (statusCode !== 200) {
             console.error(`请求失败。状态码: ${statusCode}`);
@@ -65,24 +65,42 @@ function getInfo($) {
 }
 
 function checkIpAPort(list) {
-    let usefulList=[];
-    for(let item of list){
-        console.log("开始检测代理IP"+item.ip+"是否可用");
-        let res = yield checkProxy(item)
-        console.log(res)
-    }
-    //console.log(usefulList)
+    checkProxy(list[current]).then((data)=>{
+        console.log(`proxy ${list[current].protocol.toLowerCase()}://${list[current].ip}:${list[current].port}可用`)
+        list[current].useful=1
+        list[current].checktime=Date.now()
+        usefulList.push(list[current])
+        current++
+        if(current <list.length){
+            checkIpAPort(list)
+        }else {
+            writeCotent(usefulList)
+        }
+    }).catch(err=>{
+        console.log(`proxy ${list[current].protocol.toLowerCase()}://${list[current].ip}:${list[current].port}不可用`)
+        list[current].useful=0
+        list[current].checktime=Date.now()
+        usefulList.push(list[current])
+        current++
+        if(current <list.length){
+            checkIpAPort(list)
+        }else {
+            writeCotent(usefulList)
+        }
+    })
 }
 function writeCotent(content) {
-    fs.writeFile(`./info/page_${page}.json`, JSON.stringify(content, null, 4), (err) => {
+    fs.writeFile(`./inha/page_${page}.json`, JSON.stringify(content, null, 4), (err) => {
         if (err) {
             console.log(`文件写入失败，${e.message}`);
         } else {
             console.log(`文件写入成功`);
-            // if (page < 50) {
-            //     page++;
-            //     getHtml()
-            // }
+            usefulList= [];
+            current = 0 ;
+            if (page < 50) {
+                page++;
+                getHtml()
+            }
         }
     })
 }

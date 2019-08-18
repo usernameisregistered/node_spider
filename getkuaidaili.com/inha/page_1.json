@@ -1,0 +1,152 @@
+[
+    {
+        "ip": "114.55.103.83",
+        "port": "8088",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "浙江省杭州市 阿里云计算有限公司 阿里云",
+        "createtime": 1566099715161,
+        "useful": 1,
+        "checktime": 1566099725061
+    },
+    {
+        "ip": "171.13.203.94",
+        "port": "9999",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "河南省鹤壁市  电信",
+        "createtime": 1566099715165,
+        "useful": 0,
+        "checktime": 1566099746072
+    },
+    {
+        "ip": "59.62.4.253",
+        "port": "9000",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "江西省萍乡市  电信",
+        "createtime": 1566099715169,
+        "useful": 0,
+        "checktime": 1566099747672
+    },
+    {
+        "ip": "120.79.64.147",
+        "port": "8118",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "广东省深圳市 阿里云计算有限公司 阿里云",
+        "createtime": 1566099715173,
+        "useful": 1,
+        "checktime": 1566099747751
+    },
+    {
+        "ip": "112.87.66.98",
+        "port": "9999",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "江苏省南通市  联通",
+        "createtime": 1566099715177,
+        "useful": 0,
+        "checktime": 1566099768760
+    },
+    {
+        "ip": "118.24.246.249",
+        "port": "80",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "重庆市重庆市 腾讯云计算（北京）有限责任公司 腾讯云",
+        "createtime": 1566099715180,
+        "useful": 1,
+        "checktime": 1566099768834
+    },
+    {
+        "ip": "111.230.254.195",
+        "port": "8118",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "广东省广州市 腾讯云计算（北京）有限责任公司 腾讯云",
+        "createtime": 1566099715191,
+        "useful": 1,
+        "checktime": 1566099768909
+    },
+    {
+        "ip": "61.164.39.67",
+        "port": "53281",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "浙江省杭州市 杭州众望信息技术有限公司 电信",
+        "createtime": 1566099715194,
+        "useful": 0,
+        "checktime": 1566099789914
+    },
+    {
+        "ip": "121.232.194.155",
+        "port": "9000",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "中国 江苏省 镇江市 电信",
+        "createtime": 1566099715196,
+        "useful": 0,
+        "checktime": 1566099790981
+    },
+    {
+        "ip": "180.104.62.215",
+        "port": "9000",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "中国 江苏省 徐州市 电信",
+        "createtime": 1566099715199,
+        "useful": 0,
+        "checktime": 1566099811984
+    },
+    {
+        "ip": "117.90.5.138",
+        "port": "9000",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "中国 江苏省 镇江市 电信",
+        "createtime": 1566099715202,
+        "useful": 0,
+        "checktime": 1566099832993
+    },
+    {
+        "ip": "121.232.148.37",
+        "port": "9000",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "中国 江苏省 镇江市 电信",
+        "createtime": 1566099715205,
+        "useful": 0,
+        "checktime": 1566099853999
+    },
+    {
+        "ip": "163.204.240.201",
+        "port": "9999",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "广东省汕尾市  联通",
+        "createtime": 1566099715209,
+        "useful": 0,
+        "checktime": 1566099874999
+    },
+    {
+        "ip": "125.73.220.18",
+        "port": "49128",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "广西壮族自治区钦州市  电信",
+        "createtime": 1566099715216,
+        "useful": 1,
+        "checktime": 1566099880689
+    },
+    {
+        "ip": "180.118.247.163",
+        "port": "9000",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "江苏省镇江市  电信",
+        "createtime": 1566099715220,
+        "useful": 0,
+        "checktime": 1566099881786
+    }
+]

@@ -1,0 +1,152 @@
+[
+    {
+        "ip": "60.13.42.230",
+        "port": "9999",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "甘肃省平凉市  联通",
+        "createtime": 1566100052401,
+        "useful": 0,
+        "checktime": 1566100073458
+    },
+    {
+        "ip": "121.232.148.164",
+        "port": "9000",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "中国 江苏省 镇江市 电信",
+        "createtime": 1566100052404,
+        "useful": 0,
+        "checktime": 1566100094468
+    },
+    {
+        "ip": "219.159.38.208",
+        "port": "56210",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "内蒙古自治区赤峰市  联通",
+        "createtime": 1566100052407,
+        "useful": 0,
+        "checktime": 1566100115480
+    },
+    {
+        "ip": "163.204.245.24",
+        "port": "9999",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "广东省汕尾市  联通",
+        "createtime": 1566100052411,
+        "useful": 0,
+        "checktime": 1566100136491
+    },
+    {
+        "ip": "60.13.42.43",
+        "port": "9999",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "甘肃省平凉市  联通",
+        "createtime": 1566100052414,
+        "useful": 0,
+        "checktime": 1566100157495
+    },
+    {
+        "ip": "121.232.194.159",
+        "port": "9000",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "中国 江苏省 镇江市 电信",
+        "createtime": 1566100052417,
+        "useful": 0,
+        "checktime": 1566100178501
+    },
+    {
+        "ip": "203.195.162.56",
+        "port": "3128",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "广东省广州市 腾讯云计算（北京）有限责任公司 腾讯云",
+        "createtime": 1566100052420,
+        "useful": 0,
+        "checktime": 1566100179606
+    },
+    {
+        "ip": "163.204.240.79",
+        "port": "9999",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "广东省汕尾市  联通",
+        "createtime": 1566100052423,
+        "useful": 1,
+        "checktime": 1566100179825
+    },
+    {
+        "ip": "1.197.16.176",
+        "port": "9999",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "河南省鹤壁市  电信",
+        "createtime": 1566100052427,
+        "useful": 0,
+        "checktime": 1566100200828
+    },
+    {
+        "ip": "1.197.11.143",
+        "port": "9999",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "河南省鹤壁市  电信",
+        "createtime": 1566100052430,
+        "useful": 0,
+        "checktime": 1566100221832
+    },
+    {
+        "ip": "163.204.242.114",
+        "port": "9999",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "广东省汕尾市  联通",
+        "createtime": 1566100052432,
+        "useful": 0,
+        "checktime": 1566100242836
+    },
+    {
+        "ip": "175.44.152.140",
+        "port": "9000",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "福建省三明市  联通",
+        "createtime": 1566100052436,
+        "useful": 0,
+        "checktime": 1566100263842
+    },
+    {
+        "ip": "175.44.108.101",
+        "port": "9999",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "福建省南平市  联通",
+        "createtime": 1566100052440,
+        "useful": 0,
+        "checktime": 1566100284850
+    },
+    {
+        "ip": "163.204.243.68",
+        "port": "9999",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "广东省汕尾市  联通",
+        "createtime": 1566100052443,
+        "useful": 0,
+        "checktime": 1566100305854
+    },
+    {
+        "ip": "222.72.166.235",
+        "port": "53281",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "上海市嘉定区  电信",
+        "createtime": 1566100052449,
+        "useful": 1,
+        "checktime": 1566100305954
+    }
+]

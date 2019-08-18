@@ -1,7 +1,6 @@
 const http = require('http');
-const https = require('https');
-const HttpProxyAgent = require('http-proxy-agent');
-const util = require('util');
+const https = require('https')
+const HttpProxyAgent = require('http-proxy-agent')
 exports.checkProxy = function (proxy) {
     let proxyagent = new HttpProxyAgent(`${proxy.protocol.toLowerCase()}://${proxy.ip}:${proxy.port}`);
     let get,options;
@@ -27,9 +26,9 @@ exports.checkProxy = function (proxy) {
     
     return new Promise((resolve, reject)=>{
         get(options,(res)=>{
-            resolve('httpstrue')
+            resolve('true')
         }).on('error', (e) => {
-            reject('httpsfalse')
+            reject('false')
         })
     })
 }

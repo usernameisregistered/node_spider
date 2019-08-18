@@ -1,0 +1,152 @@
+[
+    {
+        "ip": "182.122.190.243",
+        "port": "9999",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "河南省濮阳市  联通",
+        "createtime": 1566100306143,
+        "useful": 0,
+        "checktime": 1566100307451
+    },
+    {
+        "ip": "163.204.246.231",
+        "port": "9999",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "广东省汕尾市  联通",
+        "createtime": 1566100306147,
+        "useful": 0,
+        "checktime": 1566100328460
+    },
+    {
+        "ip": "124.47.7.38",
+        "port": "80",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "陕西省西安市 广电网",
+        "createtime": 1566100306150,
+        "useful": 1,
+        "checktime": 1566100328530
+    },
+    {
+        "ip": "180.104.62.5",
+        "port": "9000",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "江苏省徐州市  电信",
+        "createtime": 1566100306153,
+        "useful": 0,
+        "checktime": 1566100329644
+    },
+    {
+        "ip": "45.125.32.180",
+        "port": "3128",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "四川省成都市 成都阿尔法云网络科技有限公司 ",
+        "createtime": 1566100306160,
+        "useful": 0,
+        "checktime": 1566100350650
+    },
+    {
+        "ip": "58.253.157.211",
+        "port": "9999",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "广东省揭阳市  联通",
+        "createtime": 1566100306163,
+        "useful": 0,
+        "checktime": 1566100371649
+    },
+    {
+        "ip": "121.232.199.176",
+        "port": "9000",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "中国 江苏省 镇江市 电信",
+        "createtime": 1566100306167,
+        "useful": 0,
+        "checktime": 1566100372742
+    },
+    {
+        "ip": "121.232.148.78",
+        "port": "9000",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "中国 江苏省 镇江市 电信",
+        "createtime": 1566100306170,
+        "useful": 0,
+        "checktime": 1566100373831
+    },
+    {
+        "ip": "114.234.83.169",
+        "port": "9000",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "江苏省徐州市  电信",
+        "createtime": 1566100306175,
+        "useful": 0,
+        "checktime": 1566100374935
+    },
+    {
+        "ip": "163.125.235.141",
+        "port": "8118",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "广东省深圳市  联通",
+        "createtime": 1566100306181,
+        "useful": 0,
+        "checktime": 1566100395942
+    },
+    {
+        "ip": "121.232.148.28",
+        "port": "9000",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "中国 江苏省 镇江市 电信",
+        "createtime": 1566100306185,
+        "useful": 0,
+        "checktime": 1566100397106
+    },
+    {
+        "ip": "125.115.183.70",
+        "port": "3128",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "浙江省宁波市  电信",
+        "createtime": 1566100306190,
+        "useful": 0,
+        "checktime": 1566100398232
+    },
+    {
+        "ip": "59.62.35.250",
+        "port": "9000",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "江西省萍乡市  电信",
+        "createtime": 1566100306193,
+        "useful": 0,
+        "checktime": 1566100419231
+    },
+    {
+        "ip": "117.90.137.66",
+        "port": "9000",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "中国 江苏省 镇江市 电信",
+        "createtime": 1566100306196,
+        "useful": 0,
+        "checktime": 1566100420320
+    },
+    {
+        "ip": "182.92.113.183",
+        "port": "8118",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "中国 北京市 北京市 阿里云",
+        "createtime": 1566100306197,
+        "useful": 1,
+        "checktime": 1566100420494
+    }
+]
