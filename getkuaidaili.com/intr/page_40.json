@@ -1,0 +1,152 @@
+[
+    {
+        "ip": "101.231.50.154",
+        "port": "8000",
+        "cryptonym": "透明",
+        "protocol": "HTTP",
+        "position": "上海市  电信",
+        "createtime": 1566122095262,
+        "useful": 0,
+        "checktime": 1566122116292
+    },
+    {
+        "ip": "119.90.126.106",
+        "port": "7777",
+        "cryptonym": "透明",
+        "protocol": "HTTP",
+        "position": "中国 北京 北京 皓宽网络",
+        "createtime": 1566122095264,
+        "useful": 0,
+        "checktime": 1566122137296
+    },
+    {
+        "ip": "124.205.155.158",
+        "port": "9090",
+        "cryptonym": "透明",
+        "protocol": "HTTP",
+        "position": "中国 北京市 北京市 鹏博士",
+        "createtime": 1566122095268,
+        "useful": 0,
+        "checktime": 1566122158300
+    },
+    {
+        "ip": "124.205.155.153",
+        "port": "9090",
+        "cryptonym": "透明",
+        "protocol": "HTTP",
+        "position": "中国 北京市 北京市 鹏博士",
+        "createtime": 1566122095270,
+        "useful": 0,
+        "checktime": 1566122179304
+    },
+    {
+        "ip": "117.141.155.242",
+        "port": "53281",
+        "cryptonym": "透明",
+        "protocol": "HTTP",
+        "position": "中国 广西壮族自治区 南宁市 移动",
+        "createtime": 1566122095272,
+        "useful": 0,
+        "checktime": 1566122200306
+    },
+    {
+        "ip": "119.57.108.109",
+        "port": "53281",
+        "cryptonym": "透明",
+        "protocol": "HTTP",
+        "position": "中国 北京市 北京市 联通",
+        "createtime": 1566122095273,
+        "useful": 0,
+        "checktime": 1566122216900
+    },
+    {
+        "ip": "119.57.156.90",
+        "port": "53281",
+        "cryptonym": "透明",
+        "protocol": "HTTP",
+        "position": "中国 北京市 北京市 联通",
+        "createtime": 1566122095276,
+        "useful": 0,
+        "checktime": 1566122237907
+    },
+    {
+        "ip": "218.66.253.145",
+        "port": "8800",
+        "cryptonym": "透明",
+        "protocol": "HTTP",
+        "position": "中国 福建省 莆田市 电信",
+        "createtime": 1566122095278,
+        "useful": 1,
+        "checktime": 1566122237991
+    },
+    {
+        "ip": "221.178.176.25",
+        "port": "3128",
+        "cryptonym": "透明",
+        "protocol": "HTTP",
+        "position": "中国 江苏省 镇江市 移动",
+        "createtime": 1566122095280,
+        "useful": 1,
+        "checktime": 1566122247153
+    },
+    {
+        "ip": "117.141.155.242",
+        "port": "53281",
+        "cryptonym": "透明",
+        "protocol": "HTTP",
+        "position": "中国 广西壮族自治区 南宁市 移动",
+        "createtime": 1566122095281,
+        "useful": 0,
+        "checktime": 1566122268158
+    },
+    {
+        "ip": "121.69.10.62",
+        "port": "9090",
+        "cryptonym": "透明",
+        "protocol": "HTTP",
+        "position": "中国 北京市 北京市 鹏博士",
+        "createtime": 1566122095283,
+        "useful": 0,
+        "checktime": 1566122289157
+    },
+    {
+        "ip": "218.66.253.144",
+        "port": "8800",
+        "cryptonym": "透明",
+        "protocol": "HTTP",
+        "position": "中国 福建省 莆田市 电信",
+        "createtime": 1566122095284,
+        "useful": 1,
+        "checktime": 1566122289222
+    },
+    {
+        "ip": "124.205.155.148",
+        "port": "9090",
+        "cryptonym": "透明",
+        "protocol": "HTTP",
+        "position": "中国 北京市 北京市 鹏博士",
+        "createtime": 1566122095286,
+        "useful": 0,
+        "checktime": 1566122310223
+    },
+    {
+        "ip": "111.11.98.58",
+        "port": "9000",
+        "cryptonym": "透明",
+        "protocol": "HTTP",
+        "position": "中国 河北省 邢台市 移动",
+        "createtime": 1566122095291,
+        "useful": 0,
+        "checktime": 1566122331228
+    },
+    {
+        "ip": "124.152.32.140",
+        "port": "53281",
+        "cryptonym": "透明",
+        "protocol": "HTTP",
+        "position": "中国 甘肃省 武威市 联通",
+        "createtime": 1566122095294,
+        "useful": 0,
+        "checktime": 1566122352229
+    }
+]

@@ -5,14 +5,14 @@ const fs = require("fs");
 const net = require("net");
 const getOneAgent = require("../common/randomGetAgent").getOneAgent;
 const checkProxy = require("../common/checkProxy").checkProxy;
-let page = 10;
+let page = 16;
 let usefulList=[];
 let  current = 0;
 function getHtml() {
     let options = {
         host:'www.kuaidaili.com',
         port:443,
-        path:`/free/intr/${page}/`,
+        path:`/free/inha/${page}/`,
         method: 'GET',
         headers:{
             "user-agent":getOneAgent(),
@@ -46,9 +46,12 @@ function getHtml() {
 
 
 function getInfo($) {
+    let size = $('#list table tbody tr').length;
+    if(size == 0){
+        getHtml(page)
+    }
     console.log("开始获取代理信息")
     let list = [];
-    let size = $('#list table tbody tr').length;
     for (let i = 0; i < size; i++) {
         console.log(`获取第${i}条代理的信息`);
         let el = $('#list table.table tbody tr').eq(i).find('td');
@@ -90,7 +93,7 @@ function checkIpAPort(list) {
     })
 }
 function writeCotent(content) {
-    fs.writeFile(`./intr/page_${page}.json`, JSON.stringify(content, null, 4), (err) => {
+    fs.writeFile(`./inha/page_${page}.json`, JSON.stringify(content, null, 4), (err) => {
         if (err) {
             console.log(`文件写入失败，${e.message}`);
         } else {
