@@ -46,9 +46,12 @@ function getHtml() {
 
 
 function getInfo($) {
+    let size = $('#list table tbody tr').length;
+    if(size == 0){
+        getHtml(page)
+    }
     console.log("开始获取代理信息")
     let list = [];
-    let size = $('#list table tbody tr').length;
     for (let i = 0; i < size; i++) {
         console.log(`获取第${i}条代理的信息`);
         let el = $('#list table.table tbody tr').eq(i).find('td');
