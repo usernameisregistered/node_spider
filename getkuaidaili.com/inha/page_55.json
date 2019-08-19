@@ -1,0 +1,152 @@
+[
+    {
+        "ip": "47.107.190.212",
+        "port": "8118",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "广东省深圳市  阿里云",
+        "createtime": 1566108587430,
+        "useful": 1,
+        "checktime": 1566108587531
+    },
+    {
+        "ip": "125.71.212.25",
+        "port": "9000",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "四川省成都市  电信",
+        "createtime": 1566108587432,
+        "useful": 1,
+        "checktime": 1566108587846
+    },
+    {
+        "ip": "166.111.82.202",
+        "port": "8118",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "北京市海淀区 清华大学 教育网",
+        "createtime": 1566108587434,
+        "useful": 0,
+        "checktime": 1566108608850
+    },
+    {
+        "ip": "125.110.87.31",
+        "port": "9000",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "中国 浙江省 温州市 电信",
+        "createtime": 1566108587434,
+        "useful": 0,
+        "checktime": 1566108629852
+    },
+    {
+        "ip": "106.14.11.65",
+        "port": "8118",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "上海市上海市 阿里云计算有限公司 阿里云",
+        "createtime": 1566108587435,
+        "useful": 0,
+        "checktime": 1566108650856
+    },
+    {
+        "ip": "183.129.207.80",
+        "port": "12085",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "浙江省杭州市  电信",
+        "createtime": 1566108587436,
+        "useful": 0,
+        "checktime": 1566108658194
+    },
+    {
+        "ip": "175.44.154.217",
+        "port": "9000",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "中国 福建省 三明市 联通",
+        "createtime": 1566108587437,
+        "useful": 0,
+        "checktime": 1566108679197
+    },
+    {
+        "ip": "121.13.252.62",
+        "port": "41564",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "广东省东莞市  电信",
+        "createtime": 1566108587438,
+        "useful": 0,
+        "checktime": 1566108700202
+    },
+    {
+        "ip": "58.144.150.35",
+        "port": "8888",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "重庆市重庆市  联通",
+        "createtime": 1566108587439,
+        "useful": 0,
+        "checktime": 1566108721879
+    },
+    {
+        "ip": "59.37.33.62",
+        "port": "50686",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "广东省惠州市  电信",
+        "createtime": 1566108587440,
+        "useful": 0,
+        "checktime": 1566108742881
+    },
+    {
+        "ip": "120.25.90.253",
+        "port": "8118",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "广东省深圳市 阿里云计算有限公司 阿里云",
+        "createtime": 1566108587442,
+        "useful": 1,
+        "checktime": 1566108742984
+    },
+    {
+        "ip": "113.12.202.50",
+        "port": "50327",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "广西壮族自治区南宁市  电信",
+        "createtime": 1566108587444,
+        "useful": 1,
+        "checktime": 1566108745409
+    },
+    {
+        "ip": "124.47.7.38",
+        "port": "80",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "陕西省西安市 广电网",
+        "createtime": 1566108587445,
+        "useful": 1,
+        "checktime": 1566108767925
+    },
+    {
+        "ip": "175.44.155.78",
+        "port": "9000",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "中国 福建省 三明市 联通",
+        "createtime": 1566108587446,
+        "useful": 0,
+        "checktime": 1566108788927
+    },
+    {
+        "ip": "120.132.18.138",
+        "port": "8888",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "江苏省苏州市 天地祥云 电信",
+        "createtime": 1566108587447,
+        "useful": 1,
+        "checktime": 1566108791583
+    }
+]

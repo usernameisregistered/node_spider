@@ -1,0 +1,152 @@
+[
+    {
+        "ip": "171.80.1.182",
+        "port": "9999",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "湖北省襄阳市  电信",
+        "createtime": 1566106790132,
+        "useful": 0,
+        "checktime": 1566106811182
+    },
+    {
+        "ip": "175.44.150.171",
+        "port": "9000",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "中国 福建省 三明市 联通",
+        "createtime": 1566106790134,
+        "useful": 0,
+        "checktime": 1566106832188
+    },
+    {
+        "ip": "117.87.177.225",
+        "port": "9000",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "江苏省徐州市  电信",
+        "createtime": 1566106790137,
+        "useful": 0,
+        "checktime": 1566106853199
+    },
+    {
+        "ip": "45.125.32.181",
+        "port": "3128",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "四川省成都市 成都阿尔法云网络科技有限公司 ",
+        "createtime": 1566106790139,
+        "useful": 1,
+        "checktime": 1566106860497
+    },
+    {
+        "ip": "114.234.81.69",
+        "port": "9000",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "江苏省徐州市  电信",
+        "createtime": 1566106790141,
+        "useful": 0,
+        "checktime": 1566106861710
+    },
+    {
+        "ip": "61.164.39.68",
+        "port": "53281",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "浙江省杭州市 杭州众望信息技术有限公司 电信",
+        "createtime": 1566106790142,
+        "useful": 0,
+        "checktime": 1566106882720
+    },
+    {
+        "ip": "134.175.55.15",
+        "port": "8888",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "广东省广州市  腾讯云",
+        "createtime": 1566106790143,
+        "useful": 0,
+        "checktime": 1566106903729
+    },
+    {
+        "ip": "47.100.21.174",
+        "port": "8021",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "上海市上海市  阿里云",
+        "createtime": 1566106790145,
+        "useful": 1,
+        "checktime": 1566106903888
+    },
+    {
+        "ip": "123.101.215.202",
+        "port": "9999",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "河南省鹤壁市  电信",
+        "createtime": 1566106790147,
+        "useful": 0,
+        "checktime": 1566106924890
+    },
+    {
+        "ip": "112.85.175.215",
+        "port": "9999",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "江苏省南通市  联通",
+        "createtime": 1566106790149,
+        "useful": 0,
+        "checktime": 1566106945898
+    },
+    {
+        "ip": "175.42.168.171",
+        "port": "9000",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "中国 福建省 三明市 联通",
+        "createtime": 1566106790150,
+        "useful": 0,
+        "checktime": 1566106966900
+    },
+    {
+        "ip": "61.164.39.66",
+        "port": "53281",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "浙江省杭州市 杭州众望信息技术有限公司 电信",
+        "createtime": 1566106790152,
+        "useful": 0,
+        "checktime": 1566106987903
+    },
+    {
+        "ip": "60.191.57.78",
+        "port": "12178",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "浙江省杭州市  电信",
+        "createtime": 1566106790154,
+        "useful": 0,
+        "checktime": 1566106988040
+    },
+    {
+        "ip": "202.120.38.131",
+        "port": "80",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "上海市闵行区 上海交通大学 教育网",
+        "createtime": 1566106790156,
+        "useful": 1,
+        "checktime": 1566106988184
+    },
+    {
+        "ip": "175.42.68.66",
+        "port": "9999",
+        "cryptonym": "高匿名",
+        "protocol": "HTTP",
+        "position": "福建省宁德市  联通",
+        "createtime": 1566106790161,
+        "useful": 0,
+        "checktime": 1566107009188
+    }
+]

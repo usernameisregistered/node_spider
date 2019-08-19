@@ -5,14 +5,14 @@ const fs = require("fs");
 const net = require("net");
 const getOneAgent = require("../common/randomGetAgent").getOneAgent;
 const checkProxy = require("../common/checkProxy").checkProxy;
-let page = 6;
+let page = 55;
 let usefulList=[];
 let  current = 0;
 function getHtml() {
     let options = {
         host:'www.kuaidaili.com',
         port:443,
-        path:`/free/inha/${page}/`,
+        path:`/free/intr/${page}/`,
         method: 'GET',
         headers:{
             "user-agent":getOneAgent(),
@@ -90,14 +90,14 @@ function checkIpAPort(list) {
     })
 }
 function writeCotent(content) {
-    fs.writeFile(`./inha/page_${page}.json`, JSON.stringify(content, null, 4), (err) => {
+    fs.writeFile(`./intr/page_${page}.json`, JSON.stringify(content, null, 4), (err) => {
         if (err) {
             console.log(`文件写入失败，${e.message}`);
         } else {
             console.log(`文件写入成功`);
             usefulList= [];
             current = 0 ;
-            if (page < 50) {
+            if (page < 100) {
                 page++;
                 getHtml()
             }
