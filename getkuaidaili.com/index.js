@@ -1,21 +1,25 @@
 #!/usr/bin/node
-const https = require("https");
-const cheerio = require("cheerio");
-const fs = require("fs");
-const net = require("net");
-const getOneAgent = require("../common/randomGetAgent").getOneAgent;
-const checkProxy = require("../common/checkProxy").checkProxy;
-let page = 55;
-let usefulList=[];
-let  current = 0;
+const https = require("https")
+const cheerio = require("cheerio")
+const fs = require("fs")
+const getOneAgent = require("../common/randomGetAgent").getOneAgent
+const checkProxy = require("../common/checkProxy").checkProxy
+const args = require("process").argv ;
+let page = args[2] ? args[2] : 0; //当前页数
+let maxCount =args[5] ? args[5] : 3; // 最大的请求次数
+let requsetAccout = 0;
+let maxPage = args[3] ? args[3] : 0;// 要请求的最大页数
+let usefulList = [];
+let type = args[5] &&  args[5] == 1 ? "inha":'intr';
+let current = 0; // 当前遍历数组的索引
 function getHtml() {
     let options = {
-        host:'www.kuaidaili.com',
-        port:443,
-        path:`/free/intr/${page}/`,
+        host: 'www.kuaidaili.com',
+        port: 443,
+        path: `/free/${type}/${page}/`,
         method: 'GET',
-        headers:{
-            "user-agent":getOneAgent(),
+        headers: {
+            "user-agent": getOneAgent(),
         }
     }
     console.log(`请求：https://${options.host}${options.path}`)
@@ -31,11 +35,7 @@ function getHtml() {
             res.on("data", (chunk) => { result += chunk })
             res.on('end', () => {
                 const $ = cheerio.load(result);
-                let proxyList = getInfo($);
-
-                // checkIpAPort(proxyList).then((data)=>{
-                //     console.log(data)
-                // })
+                getInfo($);
             });
         }
 
@@ -46,61 +46,68 @@ function getHtml() {
 
 
 function getInfo($) {
-    let size = $('#list table tbody tr').length;
-    if(size == 0){
-        getHtml(page)
+    if (maxCount <= requsetAccout) {
+        let size = $('#list table tbody tr').length;
+        if (size == 0) {
+            requsetAccout++
+            getHtml(page)
+        } else {
+            console.log("开始获取代理信息")
+            let list = [];
+            for (let i = 0; i < size; i++) {
+                console.log(`获取第${i+1}条代理的信息`);
+                let el = $('#list table.table tbody tr').eq(i).find('td');
+                let tempObj = {};
+                tempObj.ip = el.eq(0).text()
+                tempObj.port = el.eq(1).text()
+                tempObj.cryptonym = el.eq(2).text()
+                tempObj.protocol = el.eq(3).text()
+                tempObj.position = el.eq(4).text()
+                tempObj.createtime = Date.now()
+                list.push(tempObj)
+            }
+        }
+        if(list.length != 0){
+            checkIpAPort(list);
+        }
     }
-    console.log("开始获取代理信息")
-    let list = [];
-    for (let i = 0; i < size; i++) {
-        console.log(`获取第${i}条代理的信息`);
-        let el = $('#list table.table tbody tr').eq(i).find('td');
-        let tempObj = {};
-        tempObj.ip = el.eq(0).text()
-        tempObj.port = el.eq(1).text()
-        tempObj.cryptonym = el.eq(2).text()
-        tempObj.protocol = el.eq(3).text()
-        tempObj.position = el.eq(4).text()
-        tempObj.createtime = Date.now()
-        list.push(tempObj)
-    }
-    checkIpAPort(list);
+
 }
 
 function checkIpAPort(list) {
-    checkProxy(list[current]).then((data)=>{
+    checkProxy(list[current]).then((data) => {
         console.log(`proxy ${list[current].protocol.toLowerCase()}://${list[current].ip}:${list[current].port}可用`)
-        list[current].useful=1
-        list[current].checktime=Date.now()
+        list[current].useful = 1
+        list[current].checktime = Date.now()
         usefulList.push(list[current])
         current++
-        if(current <list.length){
+        if (current < list.length) {
             checkIpAPort(list)
-        }else {
+        } else {
             writeCotent(usefulList)
         }
-    }).catch(err=>{
+    }).catch(err => {
         console.log(`proxy ${list[current].protocol.toLowerCase()}://${list[current].ip}:${list[current].port}不可用`)
-        list[current].useful=0
-        list[current].checktime=Date.now()
+        list[current].useful = 0
+        list[current].checktime = Date.now()
         usefulList.push(list[current])
         current++
-        if(current <list.length){
+        if (current < list.length) {
             checkIpAPort(list)
-        }else {
+        } else {
             writeCotent(usefulList)
         }
     })
 }
 function writeCotent(content) {
-    fs.writeFile(`./intr/page_${page}.json`, JSON.stringify(content, null, 4), (err) => {
+    fs.writeFile(`./${type}/page_${page}.json`, JSON.stringify(content, null, 4), (err) => {
         if (err) {
             console.log(`文件写入失败，${e.message}`);
         } else {
             console.log(`文件写入成功`);
-            usefulList= [];
-            current = 0 ;
-            if (page < 100) {
+            usefulList = [];
+            current = 0;
+            if (page < maxPage) {
                 page++;
                 getHtml()
             }
