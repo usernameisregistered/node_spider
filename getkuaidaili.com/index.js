@@ -90,7 +90,7 @@ function checkIpAPort(list) {
             writeCotent(usefulList)
         }
     }).catch(err => {
-        console.log(`proxy ${list[current].protocol.toLowerCase()}://${list[current].ip}:${list[current].port}不可用`)
+        console.log(`第${current}/${list.length}条proxy信息 ${list[current].protocol.toLowerCase()}://${list[current].ip}:${list[current].port}不可用`)
         list[current].useful = 0
         list[current].checktime = Date.now()
         usefulList.push(list[current])
