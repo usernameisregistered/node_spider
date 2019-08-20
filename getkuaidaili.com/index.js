@@ -112,7 +112,7 @@ function writeCotent(content) {
             current = 0;
             if (page < maxPage) {
                 page++;
-                getHtml()
+                getHtml(page)
             }
         }
     })
