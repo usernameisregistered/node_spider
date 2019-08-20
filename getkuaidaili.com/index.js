@@ -34,6 +34,7 @@ function getHtml() {
             let result = '';
             res.on("data", (chunk) => { result += chunk })
             res.on('end', () => {
+                console.log(`数据加载完成...`);
                 const $ = cheerio.load(result);
                 getInfo($);
             });
@@ -46,14 +47,15 @@ function getHtml() {
 
 
 function getInfo($) {
-    if (maxCount <= requsetAccout) {
+    if (requsetAccout <= maxCount) {
+        console.log(`1`);
         let size = $('#list table tbody tr').length;
+        let list = [];
         if (size == 0) {
             requsetAccout++
             getHtml(page)
         } else {
             console.log("开始获取代理信息")
-            let list = [];
             for (let i = 0; i < size; i++) {
                 console.log(`获取第${i+1}条代理的信息`);
                 let el = $('#list table.table tbody tr').eq(i).find('td');
@@ -70,6 +72,8 @@ function getInfo($) {
         if(list.length != 0){
             checkIpAPort(list);
         }
+    }else{
+        console.log(`请求次数过多`);
     }
 
 }
