@@ -6,9 +6,9 @@ const getOneAgent = require("../common/randomGetAgent").getOneAgent
 const checkProxy = require("../common/checkProxy").checkProxy
 const args = require("process").argv ;
 let page = args[2] ? args[2] : 0; //当前页数
-let maxCount =args[5] ? args[5] : 3; // 最大的请求次数
+let maxCount =args[5] ? args[5] * 1 : 3; // 最大的请求次数
 let requsetAccout = 0;
-let maxPage = args[3] ? args[3] : 0;// 要请求的最大页数
+let maxPage = args[3] ? args[3] * 1 : 0;// 要请求的最大页数
 let usefulList = [];
 let type = args[4] &&  args[4] == 1 ? "inha":'intr';
 let current = 0; // 当前遍历数组的索引
@@ -79,7 +79,7 @@ function getInfo($) {
 
 function checkIpAPort(list) {
     checkProxy(list[current]).then((data) => {
-        console.log(`proxy ${list[current].protocol.toLowerCase()}://${list[current].ip}:${list[current].port}可用`)
+        console.log(`第${current}/${list.length}条proxy信息： ${list[current].protocol.toLowerCase()}://${list[current].ip}:${list[current].port}可用`)
         list[current].useful = 1
         list[current].checktime = Date.now()
         usefulList.push(list[current])
