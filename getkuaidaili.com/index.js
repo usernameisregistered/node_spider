@@ -10,7 +10,7 @@ let maxCount =args[5] ? args[5] : 3; // 最大的请求次数
 let requsetAccout = 0;
 let maxPage = args[3] ? args[3] : 0;// 要请求的最大页数
 let usefulList = [];
-let type = args[5] &&  args[5] == 1 ? "inha":'intr';
+let type = args[4] &&  args[4] == 1 ? "inha":'intr';
 let current = 0; // 当前遍历数组的索引
 function getHtml() {
     let options = {
@@ -48,7 +48,6 @@ function getHtml() {
 
 function getInfo($) {
     if (requsetAccout <= maxCount) {
-        console.log(`1`);
         let size = $('#list table tbody tr').length;
         let list = [];
         if (size == 0) {
@@ -106,7 +105,7 @@ function checkIpAPort(list) {
 function writeCotent(content) {
     fs.writeFile(`./${type}/page_${page}.json`, JSON.stringify(content, null, 4), (err) => {
         if (err) {
-            console.log(`文件写入失败，${e.message}`);
+            console.log(`文件写入失败，${err.message}`);
         } else {
             console.log(`文件写入成功`);
             usefulList = [];
