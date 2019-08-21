@@ -31,8 +31,8 @@ function readFile(type) {
                     sql += `('${value.ip}','${value.port}',${value.cryptonym == "高匿名" ? 1 : 2},'${value.protocol}','${value.position}','${moment(value.createtime).format("YYYY-MM-DD HH:ss:mm")}',${value.useful},'${moment(value.checktime).format("YYYY-MM-DD HH:ss:mm")}'), `
                 }
                 console.log(`${path.join(__dirname, type, item)}文件内容读取完成`)
-                console.log(`删除文件${path.join(__dirname,type,item)}`)
-                fs.unlinkSync(path.join(__dirname,type,item));
+                // console.log(`删除文件${path.join(__dirname,type,item)}`)
+                // fs.unlinkSync(path.join(__dirname,type,item));
             }
             let max = successArr.sort()[successArr.length - 1];
             for (let i = 1; i < max; i++) {
