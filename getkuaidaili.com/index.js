@@ -2,16 +2,34 @@
 const https = require("https")
 const cheerio = require("cheerio")
 const fs = require("fs")
+const path = require("path")
 const getOneAgent = require("../common/randomGetAgent").getOneAgent
 const checkProxy = require("../common/checkProxy").checkProxy
-const args = require("process").argv ;
-let page = args[2] ? args[2] : 0; //当前页数
-let maxCount =args[5] ? args[5] * 1 : 1; // 最大的请求次数
-let requsetAccout = 0;
-let maxPage = args[3] ? args[3] * 1 : 0;// 要请求的最大页数
+const process = require("process");
+let args = process.argv;
+let page, maxPage, type;
 let usefulList = [];
-let type = args[4] &&  args[4] == 1 ? "inha":'intr';
 let current = 0; // 当前遍历数组的索引
+if (args.length != 5) {
+    console.log("缺少必要的参数")
+} else {
+    page = args[2] ? args[2] : 0; //当前页数
+    maxPage = args[3] ? args[3] * 1 : 0;// 要请求的最大页数
+    type = args[4] && args[4] == 1 ? "inha" : 'intr';
+    fs.stat(path.join(__dirname, "inha"), (err, stat) => {
+        if (!stat || !stat.isDirectory()) {
+            console.log("创建必要的文件夹inha")
+            fs.mkdirSync(path.join(__dirname, "inha"))
+        }
+        fs.stat(path.join(__dirname, "intr"), (err, stat) => {
+            if (!stat || !stat.isDirectory()) {
+                console.log("创建必要的文件夹intr")
+                fs.mkdirSync(path.join(__dirname, "intr"))
+            }
+            getHtml();
+        })
+    })
+}
 function getHtml() {
     let options = {
         host: 'www.kuaidaili.com',
@@ -47,34 +65,28 @@ function getHtml() {
 
 
 function getInfo($) {
-    if (requsetAccout <= maxCount) {
-        let size = $('#list table tbody tr').length;
+    let size = $('#list table tbody tr').length;
+    if (size == 0) {
+        console.log(`在请求type为${type}页数为${page}发生了错误`)
+        page++;
+        getHtml();
+    } else {
+        console.log("开始获取代理信息")
         let list = [];
-        if (size == 0) {
-            requsetAccout++
-            getHtml(page)
-        } else {
-            console.log("开始获取代理信息")
-            for (let i = 0; i < size; i++) {
-                console.log(`获取第${i+1}条代理的信息`);
-                let el = $('#list table.table tbody tr').eq(i).find('td');
-                let tempObj = {};
-                tempObj.ip = el.eq(0).text()
-                tempObj.port = el.eq(1).text()
-                tempObj.cryptonym = el.eq(2).text()
-                tempObj.protocol = el.eq(3).text()
-                tempObj.position = el.eq(4).text()
-                tempObj.createtime = Date.now()
-                list.push(tempObj)
-            }
+        for (let i = 0; i < size; i++) {
+            console.log(`获取第${i + 1}条代理的信息`);
+            let el = $('#list table.table tbody tr').eq(i).find('td');
+            let tempObj = {};
+            tempObj.ip = el.eq(0).text()
+            tempObj.port = el.eq(1).text()
+            tempObj.cryptonym = el.eq(2).text()
+            tempObj.protocol = el.eq(3).text()
+            tempObj.position = el.eq(4).text()
+            tempObj.createtime = Date.now()
+            list.push(tempObj)
         }
-        if(list.length != 0){
-            checkIpAPort(list);
-        }
-    }else{
-        console.log(`请求次数过多`);
+        checkIpAPort(list);
     }
-
 }
 
 function checkIpAPort(list) {
@@ -112,9 +124,10 @@ function writeCotent(content) {
             current = 0;
             if (page < maxPage) {
                 page++;
-                getHtml(page)
+                getHtml()
+            } else {
+                process.exit()
             }
         }
     })
 }
-getHtml(page)
