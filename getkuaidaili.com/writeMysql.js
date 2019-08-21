@@ -31,8 +31,6 @@ function readFile(type) {
                     sql += `('${value.ip}','${value.port}',${value.cryptonym == "高匿名" ? 1 : 2},'${value.protocol}','${value.position}','${moment(value.createtime).format("YYYY-MM-DD HH:ss:mm")}',${value.useful},'${moment(value.checktime).format("YYYY-MM-DD HH:ss:mm")}'), `
                 }
                 console.log(`${path.join(__dirname, type, item)}文件内容读取完成`)
-                console.log(`删除文件${path.join(__dirname,type,item)}`)
-                fs.unlinkSync(path.join(__dirname,type,item));
             }
             let max = successArr.sort()[successArr.length - 1];
             for (let i = 1; i < max; i++) {
@@ -66,7 +64,6 @@ readFile("inha").then(() => {
                 console.log(`文件写入成功`);
                 console.log('开始插入数据')
                 sql = 'insert into proxy_info (ip,port,cryptonym,protocol,position,createtime,useful,checktime) values ' + sql.slice(0,sql.length-2) + ";";
-                fs.writeFile("./log/test.sql",sql)
                 connection.query(sql, function (error, results, fields) {
                     if (error) throw error;
                     console.log('数据插入成功');
