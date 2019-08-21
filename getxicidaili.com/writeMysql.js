@@ -27,7 +27,7 @@ function readFile(type) {
                 let data = JSON.parse(fs.readFileSync(path.join(__dirname, type, item)));
                 successArr.push(item.split("_")[1].split(".")[0] * 1);
                 for (let value of data) {
-                    sql += `('${value.ip}','${value.port}',${value.cryptonym == "高匿名" ? 1 : 2},'${value.protocol}','${value.position}','${moment(value.createtime).format("YYYY-MM-DD HH:ss:mm")}',${value.useful},'${moment(value.checktime).format("YYYY-MM-DD HH:ss:mm")}'), `
+                    sql += `('${value.ip}','${value.port}',${value.cryptonym == "高匿" ? 1 : 2},'${value.protocol}','${value.position.trim()}','${moment(value.createtime).format("YYYY-MM-DD HH:ss:mm")}',${value.useful},'${moment(value.checktime).format("YYYY-MM-DD HH:ss:mm")}'), `
                 }
                 console.log(`${path.join(__dirname, type, item)}文件内容读取完成`)
             }
