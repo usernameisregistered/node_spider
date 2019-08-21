@@ -42,7 +42,7 @@ readFile("nn").then(() => {
         let content = '';
         if(stat){
             content = JSON.parse(fs.readFileSync("./log/writeSql.json"));
-            content["nn"].successArr = content["nn"].successArr.concat(data.inha.successArr)
+            content["nn"].successArr = content["nn"].successArr.concat(data.nn.successArr)
             let max = content["nn"].successArr[content["nn"].successArr.length -1]
             content["nn"].errorArr = [];
             for(let i = 1 ;i < max;i++){
@@ -50,7 +50,7 @@ readFile("nn").then(() => {
                     content["nn"].errorArr.push(i*1)
                 }
             }
-            content["nt"].successArr = content["nt"].successArr.concat(data.inha.successArr)
+            content["nt"].successArr = content["nt"].successArr.concat(data.nt.successArr)
             content["nt"].errorArr = [];
             max = content["nt"].successArr[content["nt"].successArr.length -1]
             for(let i = 1 ;i < max;i++){
