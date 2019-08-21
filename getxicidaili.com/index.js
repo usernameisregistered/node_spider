@@ -34,7 +34,7 @@ function getHtml() {
     let options = {
         host: 'www.xicidaili.com',
         port: 443,
-        path: `/free/${type}/${page}/`,
+        path: `/${type}/${page}/`,
         method: 'GET',
         headers: {
             "user-agent": getOneAgent(),
