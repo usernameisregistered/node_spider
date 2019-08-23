@@ -29,7 +29,7 @@ function checkOneProxy(){
             proxyList[index].usefulaccount = proxyList[index].usefulaccount * 1 + 1
             proxyList[index].checktime = Date.now()
             index++
-            wirteSql()
+            wirteSql(proxyList[index])
             checkOneProxy()
         }).catch(err => {
             console.log(`第${index}/${proxyList.length}条proxy信息： ${proxyList[index].protocol.toLowerCase()}://${proxyList[index].ip}:${proxyList[index].port}可用`)
@@ -37,7 +37,7 @@ function checkOneProxy(){
             proxyList[index].unusefulaccount = proxyList[index].unusefulaccount * 1 + 1
             proxyList[index].checktime = Date.now()
             index++
-            wirteSql()
+            wirteSql(proxyList[index])
             checkOneProxy()
         })
     }else{
