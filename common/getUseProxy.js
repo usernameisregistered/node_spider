@@ -15,7 +15,6 @@ let sql = `select id,ip,port,protocol,unusefulaccount,usefulaccount from proxy_i
 console.log(sql)
 connection.query(sql, function (error, results, fields) {
     if (error) throw error; 
-    //connection.end();
     for (let item of results) {
         proxyList.push(item)
     }
@@ -30,6 +29,7 @@ function checkOneProxy(){
             proxyList[index].usefulaccount = proxyList[index].usefulaccount * 1 + 1
             proxyList[index].checktime = Date.now()
             index++
+            wirteSql()
             checkOneProxy()
         }).catch(err => {
             console.log(`第${index}/${proxyList.length}条proxy信息： ${proxyList[index].protocol.toLowerCase()}://${proxyList[index].ip}:${proxyList[index].port}可用`)
@@ -37,11 +37,21 @@ function checkOneProxy(){
             proxyList[index].unusefulaccount = proxyList[index].unusefulaccount * 1 + 1
             proxyList[index].checktime = Date.now()
             index++
+            wirteSql()
             checkOneProxy()
         })
     }else{
-        fs.writeFileSync('usefulProxy.json',JSON.stringify(proxyList,null,4))
-    }
-    
+        fs.writeFileSync('usefulProxy.json',JSON.stringify(proxyList.filter(item=>item.useful!=0),null,4));
+        connection.end();
+        process.exit()
+    }  
+}
+
+function wirteSql(item){
+    let sql = `update proxy_info_distinct set usefulaccount=${item.usefulaccount},unusefulaccount=${item.unusefulaccount},checktime=${item.checktime} where id=${item,id}`
+    connection.query(sql, function (error, results, fields) {
+        if (error) throw error; 
+        console.log("数据写入成功")
+    });
 }
 
