@@ -9,7 +9,7 @@ connection.connect(function(err) {
     if (err) {
       console.error('数据连接失败: ' + err.stack);
     }else{
-        console.log('数据连接成功：' + connection.threadId);
+        //console.log('数据连接成功：' + connection.threadId);
     }
 });
 

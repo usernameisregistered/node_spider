@@ -15,7 +15,7 @@ if (args.length != 5) {
 } else {
     page = args[2] ? args[2] : 0; //当前页数
     maxPage = args[3] ? args[3] * 1 : 0;// 要请求的最大页数
-    type = args[4] && args[4] == 1 ? "inha" : 'intr';
+    type = args[4] || 'intr';
     fs.stat(path.join(__dirname, "inha"), (err, stat) => {
         if (!stat || !stat.isDirectory()) {
             console.log("创建必要的文件夹inha")
@@ -93,7 +93,9 @@ function checkIpAPort(list) {
     checkProxy(list[current]).then((data) => {
         console.log(`第${current}/${list.length}条proxy信息： ${list[current].protocol.toLowerCase()}://${list[current].ip}:${list[current].port}可用`)
         list[current].useful = 1
-        list[current].checktime = Date.now()
+        list[current].checktime = Date.now();
+        list[current].usefulaccount = 1
+        list[current].unusefulaccount = 0
         usefulList.push(list[current])
         current++
         if (current < list.length) {
@@ -105,6 +107,8 @@ function checkIpAPort(list) {
         console.log(`第${current}/${list.length}条proxy信息 ${list[current].protocol.toLowerCase()}://${list[current].ip}:${list[current].port}不可用`)
         list[current].useful = 0
         list[current].checktime = Date.now()
+        list[current].usefulaccount = 0
+        list[current].unusefulaccount = 1
         usefulList.push(list[current])
         current++
         if (current < list.length) {

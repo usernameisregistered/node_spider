@@ -26,9 +26,9 @@ exports.checkProxy = function (proxy) {
     
     return new Promise((resolve, reject)=>{
         get(options,(res)=>{
-            resolve('true')
+            resolve(proxy)
         }).on('error', (e) => {
-            reject('false')
+            reject(proxy)
         })
     })
 }

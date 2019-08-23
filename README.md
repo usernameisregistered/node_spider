@@ -10,7 +10,7 @@
 |:-:|:-:|:-:|:-:|
 |page|请求的开始页数|0|number|
 |maxPage|请求的结束页数|0|number|
-|type|请求的页面类型 1：inha 0:intr|0|number|
+|type|请求的页面类型 inha intr|intr|string|
 
 ### getUserAgent
 ```
@@ -28,4 +28,4 @@
 |:-:|:-:|:-:|:-:|
 |page|请求的开始页数|0|number|
 |maxPage|请求的结束页数|0|number|
-|type|请求的页面类型 1：inha 0:intr|0|number|
+|type|请求的页面类型 nn nt|nt|string|

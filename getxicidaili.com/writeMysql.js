@@ -27,7 +27,7 @@ function readFile(type) {
                 let data = JSON.parse(fs.readFileSync(path.join(__dirname, type, item)));
                 successArr.push(item.split("_")[1].split(".")[0] * 1);
                 for (let value of data) {
-                    sql += `('${value.ip}','${value.port}',${value.cryptonym == "高匿" ? 1 : 2},'${value.protocol}','${value.position.trim()}','${moment(value.createtime).format("YYYY-MM-DD HH:ss:mm")}',${value.useful},'${moment(value.checktime).format("YYYY-MM-DD HH:ss:mm")}'), `
+                    sql += `('${value.ip}','${value.port}',${value.cryptonym == "高匿" ? 1 : 2},'${value.protocol}','${value.position.trim()}','${moment(value.createtime).format("YYYY-MM-DD HH:ss:mm")}',${value.useful},'${moment(value.checktime).format("YYYY-MM-DD HH:ss:mm")}',${value.unusefulaccout},${value.usefulaccount}), `
                 }
                 console.log(`${path.join(__dirname, type, item)}文件内容读取完成`)
             }
@@ -67,7 +67,7 @@ readFile("nn").then(() => {
             } else {
                 console.log(`文件写入成功`);
                 console.log('开始插入数据')
-                sql = 'insert into proxy_info (ip,port,cryptonym,protocol,position,createtime,useful,checktime) values ' + sql.slice(0,sql.length-2) + ";";
+                sql = 'insert into proxy_info (ip,port,cryptonym,protocol,position,createtime,useful,checktime,unusefulaccount,usefulaccount) values ' + sql.slice(0,sql.length-2) + ";";
                 connection.query(sql, function (error, results, fields) {
                     if (error) throw error;
                     console.log('数据插入成功');
