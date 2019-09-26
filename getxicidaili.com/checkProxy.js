@@ -31,7 +31,7 @@ if(search.startTime > search.endTime){
     console.error("您传入的开始时间大于结束时间")
     return
 }
-sql = 'select id,ip,port,protocol,unusefulaccount,usefulaccount from proxy_info_new where createtime > "' + moment(search.startTime).format("YYYY-MM-DD HH:ss:mm") + '" and createtime < "'+ moment(search.endTime).format("YYYY-MM-DD HH:ss:mm")+'"';
+sql = 'select id,ip,port,protocol,unusefulaccount,usefulaccount from proxy_info_new where source="www.xicidaili.com" and createtime > "' + moment(search.startTime).format("YYYY-MM-DD HH:ss:mm") + '" and createtime < "'+ moment(search.endTime).format("YYYY-MM-DD HH:ss:mm")+'"';
 if(args[4]){
     search.type = args[4];
     sql = sql + " and protocol = '" + search.type.toUpperCase() + "'";

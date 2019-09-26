@@ -4,6 +4,7 @@ const cheerio = require("cheerio")
 const fs = require("fs")
 const path = require("path")
 const process = require("process")
+const HttpProxyAgent = require('http-proxy-agent');
 const args = process.argv
 const moment = require("moment")
 let page = args[5] ? args[5]*1 :1;
@@ -55,6 +56,8 @@ switch(type){
         console.error("你要请求的类型不被允许")
 }
 function getHtml() {
+    let proxy = {protocol:'https',ip:'123.101.110.50',port:"9999"}
+    let proxyagent = new HttpProxyAgent(`${proxy.protocol.toLowerCase()}://${proxy.ip}:${proxy.port}`);
     let options = {
         host: 'www.xicidaili.com',
         port: 443,
@@ -62,7 +65,8 @@ function getHtml() {
         method: 'GET',
         headers: {
             "user-agent": getOneAgent(),
-        }
+        },
+        agent:proxyagent,
     }
     console.log(`请求：https://${options.host}${options.path}`)
     https.get(options, function (res) {
