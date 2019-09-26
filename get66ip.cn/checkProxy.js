@@ -68,7 +68,7 @@ function checkProxy(proxy) {
         }
         return new Promise((resolve, reject)=>{
             https.get(options,(res)=>{
-               let sql = `update proxy_info_new set usefulaccount=${proxy.usefulaccount * 1 + 1} , protocol="HTTPS", useful=1, checktime='${moment(Date.now()).format("YYYY-MM-DD HH:ss:mm")}' where id=${proxy.id}`
+               let sql = `update proxy_info_new set usefulaccount=${proxy.usefulaccount * 1 + 1} , useful=1, checktime='${moment(Date.now()).format("YYYY-MM-DD HH:ss:mm")}' where id=${proxy.id}`
                connection.query(sql,(err,result,fields)=>{if(err){throw err}else{console.log(`https://${proxy.ip}:${proxy.port}可用`)}})
                resolve(proxy)
             }).on('error', (e) => {
@@ -106,7 +106,7 @@ function checkProxy(proxy) {
                connection.query(sql,(err,result,fields)=>{if(err){throw err}else{console.log(`${proxy.protocol.toLowerCase()}://${proxy.ip}:${proxy.port}可用`)}})
                resolve(proxy)
             }).on('error', (e) => {
-                let sql = `update proxy_info_new set unusefulaccount=${proxy.unusefulaccount * 1 + 1} , useful=0, checktime='${moment(Date.now()).format("YYYY-MM-DD HH:ss:mm")}' where id=${proxy.id}`
+                let sql = `update proxy_info_new set unusefulaccount=${proxy.unusefulaccount * 1 + 1} , protocol='${proxy.protocol == "HTTP" ? "HTTPS": "HTTP"}', useful=0, checktime='${moment(Date.now()).format("YYYY-MM-DD HH:ss:mm")}' where id=${proxy.id}`
                 connection.query(sql,(err,result,fields)=>{if(err){throw err}else{console.log(`${proxy.protocol.toLowerCase()}://${proxy.ip}:${proxy.port}不可用`)}})
                 reject(proxy)
             })
